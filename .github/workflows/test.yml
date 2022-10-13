@@ -11,8 +11,8 @@ jobs:
     runs-on: 'ubuntu-latest'
     steps:
       - uses: actions/checkout@v3
-      - uses: amannn/action-semantic-pull-request@v4
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name:                 Cancel Previous Runs
+        uses:                 styfle/cancel-workflow-action@9f10b1b9fa56e99e4c5d12c2a085c8a0c37ab0ac # 0.10.1
+      - name: Hello
         run: |
-          - echo "Hello"
+          echo "Hello"
